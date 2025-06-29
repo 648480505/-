@@ -1,0 +1,20 @@
+postgres:
+  password: postgres
+tmdb:
+ enabled: false
+ 
+log:
+ file_rotator:
+   enabled: true
+ #level: debug  
+   
+dht_crawler:
+ reseed_bootstrap_nodes_interval: 1h0m0s
+ rescrape_threshold: 24h0m0s
+ 
+ 
+#classifier:
+  #workflow: zidingyi
+
+
+ 

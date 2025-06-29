@@ -1,0 +1,15 @@
+$schema: "https://bitmagnet.io/schemas/classifier-0.1.json"
+workflows:
+  default:
+    find_match:
+        - if_else:
+            condition: torrent.baseName.matches("[a-zA-Z]+-[0-9]+")
+            if_action:
+              add_tag: av
+            else_action: unmatched
+    
+        - if_else:
+            condition: torrent.baseName.matches("[\u4e00-\u9fa5]+") 
+            if_action:
+              add_tag: chinese
+            else_action: delete   
